@@ -17,6 +17,9 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "dayjs": "^1.11.13",
+    "antd": "^5.0.0",
+    "yup": "^1.6.1",
     "@testing-library/jest-dom": "^6.1.5",
     "@testing-library/react": "^14.1.2",
     "@testing-library/user-event": "^14.5.1",
