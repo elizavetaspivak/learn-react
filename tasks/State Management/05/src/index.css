@@ -54,6 +54,16 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.task{
+  border: 1px solid black;
+  border-radius: 20px;
+  margin: 20px;
+}
+
+.taskButtons{
+  margin: 20px;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

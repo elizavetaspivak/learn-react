@@ -22,7 +22,6 @@ export const NotificationPreferences: React.FC<NotificationPreferencesProps> = (
 
     const {values, errors, isValid, handleSubmit, handleChange} = useFormValidation(initialValues)
 
-    console.log(errors, 'errors')
     return (
         <form onSubmit={(e) => {
             e.preventDefault();

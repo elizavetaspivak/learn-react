@@ -27,7 +27,7 @@ export type TaskAction =
   | { type: 'ADD_TASK'; payload: Omit<Task, 'id' | 'createdAt'> }
   | { type: 'UPDATE_TASK'; payload: { id: string } & Partial<Task> }
   | { type: 'DELETE_TASK'; payload: { id: string } }
-  | { type: 'SET_FILTER'; payload: { type: 'status' | 'priority'; value: string | undefined } }
+  | { type: 'SET_FILTER'; payload: { status?: TaskStatus; priority?: TaskPriority } }
   | { type: 'SET_SORT'; payload: { by: 'createdAt' | 'priority'; order: 'asc' | 'desc' } };
 
 export interface TaskManagerProps {
