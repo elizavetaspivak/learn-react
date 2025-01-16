@@ -54,6 +54,24 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+
+.cart{
+  height: 200px;
+  display: flex;
+}
+
+.discounts{
+  margin: 20px;
+}
+
+.products{
+  height: 200px;
+  display: flex;
+}
+.product{
+  margin: 40px;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
