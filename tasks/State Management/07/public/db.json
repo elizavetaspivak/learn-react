@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "John Doefsdfd",
+      "age": 25,
+      "email": "",
+      "details": {
+        "age": 21,
+        "locations": ""
+      }
+    },
+    {
+      "id": "2",
+      "name": "Jane Smith",
+      "age": 30,
+      "email": "",
+      "details": {
+        "age": 21,
+        "locations": ""
+      }
+    }
+  ]
+}

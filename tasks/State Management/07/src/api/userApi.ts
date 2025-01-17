@@ -1,6 +1,7 @@
 import { User } from '../types/User';
 
-const BASE_URL = '/api';
+const BASE_URL = 'http://localhost:3000';
+export const abortController = new AbortController();
 
 export class ApiError extends Error {
   constructor(public status: number, message: string) {
@@ -18,23 +19,25 @@ async function handleResponse<T>(response: Response): Promise<T> {
 
 export const userApi = {
   async getUsers(): Promise<User[]> {
-    const response = await fetch(`${BASE_URL}/users`);
+    const response = await fetch(`${BASE_URL}/users`, {signal: abortController.signal});
     return handleResponse<User[]>(response);
   },
 
   async getUser(id: number): Promise<User> {
-    const response = await fetch(`${BASE_URL}/users/${id}`);
+    const response = await fetch(`${BASE_URL}/users/${id}`, {signal: abortController.signal});
     return handleResponse<User>(response);
   },
 
   async updateUser(user: User): Promise<User> {
     const response = await fetch(`${BASE_URL}/users/${user.id}`, {
       method: 'PUT',
+      signal: abortController.signal,
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(user),
     });
+
     return handleResponse<User>(response);
   },
 };
